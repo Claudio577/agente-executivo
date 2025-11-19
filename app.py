@@ -2,7 +2,14 @@ import streamlit as st
 import openai
 import langchain
 from agents.agente_executivo import criar_agente_executivo
+import os
 
+st.write("🔍 CAMINHO DO ARQUIVO EXECUTADO PELO STREAMLIT:")
+st.code(os.path.abspath(__file__))
+
+st.write("🔍 CONTEÚDO EXATO DO ARQUIVO EXECUTADO PELO STREAMLIT:")
+with open(__file__, "r") as f:
+    st.code(f.read())
 
 st.set_page_config(page_title="Agente Executivo", page_icon="💼")
 
