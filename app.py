@@ -1,4 +1,5 @@
-# requirements: requirements2.txt
+# streamlit requirements: requirements2.txt
+
 
 import streamlit as st
 from agents.agente_executivo import criar_agente_executivo
