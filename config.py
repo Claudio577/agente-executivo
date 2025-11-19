@@ -1,12 +1,18 @@
 import os
 from dotenv import load_dotenv
-from langchain.chat_models import init_chat_model
+from openai import OpenAI
 
 load_dotenv()
 
 def get_llm():
-    return init_chat_model(
-        model="gpt-4o-mini",
-        api_key=os.getenv("OPENAI_API_KEY"),
-        temperature=0.1,
-    )
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+    def call_model(messages):
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages,
+            temperature=0.1,
+        )
+        return response.choices[0].message["content"]
+
+    return call_model
