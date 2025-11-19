@@ -8,7 +8,7 @@ Responda sempre de maneira clara, objetiva e estruturada.
 def criar_agente_executivo():
     llm = get_llm()
 
-    def agente(input_text: str):
+    def agente(input_text):
         messages = [
             {"role": "system", "content": EXECUTIVE_PROMPT},
             {"role": "user", "content": input_text}
