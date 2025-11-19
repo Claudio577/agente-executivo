@@ -1,5 +1,4 @@
 import streamlit as st
-import openai
 from agents.agente_executivo import criar_agente_executivo
 import os
 
