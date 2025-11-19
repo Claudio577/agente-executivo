@@ -15,11 +15,11 @@ if st.button("Enviar"):
     else:
         with st.spinner("Gerando resposta..."):
             try:
-                agent = criar_agente_executivo()
-                response = agent.invoke({"input": user_input})
+                agente = criar_agente_executivo()
+                resposta = agente(user_input)
 
                 st.subheader("📘 Resposta do Agente:")
-                st.write(response)
+                st.write(resposta)
 
             except Exception as e:
                 st.error(f"Ocorreu um erro ao gerar a resposta: {e}")
