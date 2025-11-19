@@ -1,6 +1,7 @@
 import streamlit as st
 from agents.agente_executivo import criar_agente_executivo
-
+print(">>> VERSÃO DO OPENAI:", openai.__version__)
+print(">>> VERSÃO DO LANGCHAIN:", langchain.__version__)
 st.set_page_config(page_title="Agente Executivo", page_icon="💼")
 
 st.title("💼 Agente Executivo — LangChain + Streamlit")
