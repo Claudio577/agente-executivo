@@ -1,4 +1,4 @@
-# streamlit requirements: requirements2.txt
+
 
 
 import streamlit as st
